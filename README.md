@@ -1,68 +1,112 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# GUIDELINES FOR Unicorn Trading (v 0.8 beta)
 
-## Available Scripts
+# Index
 
-In the project directory, you can run:
+-   Project goal
+-   Team
+-   Workflow
+-   Stack and tools
+-   Project setup
+-   Branch naming
+-   Commit messages
 
-### `npm start`
+# PROJECT GOAL AND ASSIGNMENTS:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Phase 1: Make the landing page with login buttin
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Phase 2: Add a dashboard
 
-### `npm test`
+# TEAM:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   Bibin N.J.
+-   Fabio Viscuso (Project Lead)
+-   Marco Moncada
+-   Roberta Tedde
 
-### `npm run build`
+-   Jacopo "jagama" M.G.S. (Stakeholder)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# WORKFLOW:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+-   Daily stand-up review (15 minutes, from 9:30 to 9:45, Monday to Friday)
+-   Sprint start: each Monday
+-   Sprint duration: 1 week
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Schedule:
+Phase 1 : ENVIRONMENT PREPARATION
 
-### `npm run eject`
+-   Immediately notify any problem with your working setup (e.g. VS Code not starting)
+-   If starting a new feature, first pull updates from the appropriate branch(es)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Phase 2 : DEVELOPMENT
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   Commit often, for example when a text section is complete
+-   Push at any meaningful chunk of work (e.g. completed a layout section)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Phase 3 : ON COMPLETED (PUSHED) TASK
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-   Make comparisons and/or initial tests
+-   Ask for a code review
+-   Make a Pull Request to the appropriate branch and notify the RO
 
-## Learn More
+# STACK AND TOOLS:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-   VS Code with required extensions [Live Server, Live Share], suggested [Git Graph, Git Lens]
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   Vanilla CSS
 
-### Code Splitting
+-   React 18+
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+-   GitHub repo [https://github.com/FabioViscuso/unicorn-trading]
 
-### Analyzing the Bundle Size
+-   Trello kanban [https://trello.com/b/tjNyr5A1/react-project-team-6]
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+# PROJECT SETUP:
 
-### Making a Progressive Web App
+The project uses a create-react-app with a custom template for the particle effects
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+We use vanilla CSS, put into the css folder, which is shared among all components.
 
-### Advanced Configuration
+# BRANCH STRUCTURE AND NAMING:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+This project will have a production branch named [main] and a development branch named [develop]
+Each page in the # PROJECT GOAL AND ASSIGNMENTS section will have its appropriate branch [feat/page-name]
+Any pull request CANNOT be directed to [main], but to [develop] (mostly) or other relevant branch
 
-### Deployment
+Branch Naming:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+-   New feature: feat/name-of-feature [e.g. feat/homepage]
+-   Bugfixing: bugfix/what-you-fixed [e.g. bugfix/missing-nav-css]
+-   Hotfix: hotfix/what-you-fixed
 
-### `npm run build` fails to minify
+    NOTE: Hotfixes are non-blocking issues that can be solved on short term, while bugfixes
+    must be re-added to the backlog and scheduled for another sprint
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+# COMMIT MESSAGES:
+
+Commit messages should have a title and a more descriptive body
+
+---
+
+If using command-line Git:
+
+-   Adding a feature: git commit -m "feat: <message>" -m "<message>"
+    Example: git commit -m "feat: new homepage" -m "added basic files for the homepage"
+
+-   Bugfixing: git commit -m "fix: <message> <relatedCommit>" -m "<message>"
+    Example: git commit -m "fix: fixed broken css class from 2ebc23d" -m "fixed misspelled css class name myclas. Expected myClass"
+
+-   Amend: git commit -m "amend: <message> <relatedCommit>"
+    Example: git commit -m "amend: forgot to add image relative to commit a32d3g"
+
+    Amend is a git feature, in this case we're using it as a standard commit
+    to notify when a commit is just a quick fix or addition on top of a previous one.
+    This makes it easier to see commits context and doing a bit of differentiation.
+
+---
+
+If using VS Code's Git GUI, separate title and body by putting a blank line between them.
+
+Example:
+feat: new homepage
+
+added basic files for the homepage
