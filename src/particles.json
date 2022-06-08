@@ -37,23 +37,23 @@
                 "enable": false,
                 "speed": 40,
                 "minimumValue": 0.1,
-                "sync": false
+                "sync": true
             }
         },
         "lineLinked": {
             "enable": true,
             "distance": 150,
-            "color": "#ffffff",
+            "color": "#888",
             "opacity": 0.4,
             "width": 1
         },
         "move": {
-            "bounce": true,
+            "bounce": false,
             "enable": true,
-            "speed": 3,
+            "speed": 0.5,
             "direction": "none",
             "random": false,
-            "straight": false,
+            "straight": true,
             "out_mode": "bounce",
             "attract": {
                 "enable": false,
@@ -106,8 +106,8 @@
     },
     "detectRetina": true,
     "background": {
-        "color": "#555a",
-        "image": "",
+        "color": "",
+        "image": "linear-gradient(to bottom right, #7BDFF2, #B2F7EF)",
         "position": "50% 50%",
         "repeat": "no-repeat",
         "size": "cover"
