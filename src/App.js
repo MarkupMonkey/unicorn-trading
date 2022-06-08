@@ -8,19 +8,20 @@ import {Hero} from './components/Hero';
 
 // Homepage lists portion
 import Lists from './components/Lists';
-import ListData from './components/ListData';
+import { ListData } from './components/ListData';
 
 function App() {
     const particlesInit = useCallback(main => {
         loadFull(main);
     }, [])
-    
+
     // Iterating through homepage list array
-    const homePageList =ListData.map((item) => {
+    const homePageList = ListData.map((item) => {
         return (
-          <Lists  {...item}/>
-      )
-  })
+            <Lists {...item} />
+        )
+    })
+
 
     return (
         <div className="App">
