@@ -18,7 +18,7 @@ function App() {
     // Iterating through homepage list array
     const homePageList =ListData.map((item) => {
         return (
-          <Lists {...item}/>
+          <Lists  {...item}/>
       )
   })
 
