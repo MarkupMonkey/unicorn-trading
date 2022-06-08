@@ -24,3 +24,6 @@
 
 /* homepage list component */
 @import "lists.css";
+
+/* hero component */
+@import "hero.css";

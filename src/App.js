@@ -3,6 +3,9 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import particlesOptions from "./particles.json";
 
+//hero section
+import {Hero} from './components/Hero';
+
 // Homepage lists portion
 import Lists from './components/Lists';
 import ListData from './components/ListData';
@@ -15,7 +18,7 @@ function App() {
     // Iterating through homepage list array
     const homePageList =ListData.map((item) => {
         return (
-          <Lists {...item} />
+          <Lists  {...item}/>
       )
   })
 
@@ -25,6 +28,7 @@ function App() {
             <header className="bg-cottoncandy">
                 <h1 className=''>Hello world!</h1>
             </header>
+           <Hero/> 
             {/* Rendering homepage List items */}
             {homePageList}
         </div>
