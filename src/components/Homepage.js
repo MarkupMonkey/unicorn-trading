@@ -13,16 +13,17 @@ import { PricesWrapper } from "./PricingWrapper";
 class Homepage extends React.Component {
     render() {
         // Iterating through homepage list array
-        const homePageList = ListData.map((item) => {
+        const homePageList = ListData.map((item, index) => {
             return (
                 <Lists key={item.id} {...item} />
+
             )
         })
         return (
             <div className="homepage">
                 <Hero />
                 {homePageList}
-                <PricesWrapper/>
+                <PricesWrapper />
             </div>
         )
     }

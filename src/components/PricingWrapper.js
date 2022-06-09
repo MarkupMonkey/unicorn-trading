@@ -4,8 +4,8 @@ import { Pricing } from "./Pricing";
 
 export const PricesWrapper = (props) => {
     const pricing = [
-        { id: 1, name: 'month', price: 67 },
-        { id: 2, name: 'year', price: 670 }
+        { id: 1, billingPeriod: 'month', price: 67 },
+        { id: 2, billingPeriod: 'year', price: 670 }
     ]
 
     const pricingMenu = pricing.map(items => {

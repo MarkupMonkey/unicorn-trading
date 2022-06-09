@@ -19,7 +19,7 @@
 }
 
 .hero-mail {
-    border: 2px solid pink;
+    border: 2px solid var(--color-cottoncandy);
     background-color: var(--color-mintcream);
     padding: 0.8rem;
     margin-right: 2rem;
@@ -37,16 +37,11 @@
         gap: 6rem;
     }
 
-    .hero-pic {
+    .hero-text {
         width: 100%;
     }
 
-    .hero-one {
+    .hero-pic {
         width: 100%;
-        align-items: center;
-        justify-content: center;
-    }
-    .hero-one > div > p {
-        text-align: center;
     }
 }
