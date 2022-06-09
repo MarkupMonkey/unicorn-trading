@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import particlesOptions from "./particles.json";
+import Sidebar from './components/sidebar';
 
 //hero section
 import {Hero} from './components/Hero';
@@ -26,12 +27,14 @@ function App() {
     return (
         <div className="App">
             <Particles options={particlesOptions} init={particlesInit} />
-            <header className="bg-cottoncandy">
-                <h1 className=''>Hello world!</h1>
-            </header>
+
+              
+
+           <Sidebar />
            <Hero/> 
             {/* Rendering homepage List items */}
             {homePageList}
+
         </div>
     );
 }
