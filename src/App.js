@@ -5,7 +5,6 @@ import particlesOptions from "./particles.json";
 import Sidebar from './components/Sidebar';
 import Homepage from './components/Homepage';
 
-
 function App() {
     const particlesInit = useCallback(main => {
         loadFull(main);
