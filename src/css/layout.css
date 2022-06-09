@@ -3,14 +3,24 @@
 }
 
 .sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
     width: 30vw;
     height: 100vh;
 }
 
 .logo{
+    min-width:70px;
+    min-height: 70px;
     width: 30%;
     height: 30%;
-    background-color: aqua;
+   background-image: url(/public/unicorno_logo.png);
+   background-size:contain;
+   background-repeat: no-repeat;
+
+   background-position: center;
 }
 
 .gradient{
@@ -24,8 +34,10 @@
 .flex{
     display:flex;
 }
-.conteiner{
-    height: 40vh;
+.link-sidebar{
+    display: flex;
+    direction: column;
+    gap: 4rem;
 }
 
 
@@ -34,3 +46,23 @@
 }
 
 
+@media only screen and (min-width:0px) and (max-width:767px){
+    .sidebar{
+        width:100vw;
+        padding: 4rem 1rem;
+        height:unset;
+        flex-direction: row !important;
+        justify-content: space-between;
+        
+    }
+
+
+    .link-sidebar{
+        display: none !important;
+    }
+
+
+    
+}
+    
+    
