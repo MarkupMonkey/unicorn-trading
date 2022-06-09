@@ -1,9 +1,13 @@
 import React from "react";
+
+// Homepage hero section
 import { Hero } from "./Hero";
 
 // Homepage lists portion
 import Lists from './Lists';
 import { ListData } from './ListData';
+
+// Homepage pricing section
 import { PricesWrapper } from "./PricingWrapper";
 
 class Homepage extends React.Component {
@@ -11,7 +15,7 @@ class Homepage extends React.Component {
         // Iterating through homepage list array
         const homePageList = ListData.map((item) => {
             return (
-                <Lists {...item} />
+                <Lists key={item.id} {...item} />
             )
         })
         return (
