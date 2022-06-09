@@ -17,6 +17,12 @@
     --font-size-xl: 4.2rem;
     --font-size-title: 6rem;
 
+    /* FONT WEIGHT */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
     /* LINE HEIGHT */
     --line-height-s: 1.25;
     --line-height-m: 1.5;
@@ -113,4 +119,8 @@ textarea::placeholder {
     text-align: center;
     color: var(--color-darkgray);
     font-size: var(--font-size-l);
+}
+
+html {
+    scroll-behavior: smooth;
 }
