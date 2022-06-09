@@ -4,7 +4,7 @@ export default function Lists(props) {
   const [state, changeState] = useState(props.id);
 
   return (
-    <section className={`list ${state % 2 === 1 ? "row" : "row-reverse"}`}>
+    <section id={'homeList' + props.id} className={`list ${state % 2 === 1 ? "row" : "row-reverse"}`}>
       <picture className="list-image" >
         <img src={props.img} alt="" />
       </picture>

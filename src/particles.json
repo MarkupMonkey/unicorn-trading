@@ -107,7 +107,7 @@
     "detectRetina": true,
     "background": {
         "color": "",
-        "image": "linear-gradient(to bottom right, #7BDFF2, #B2F7EF)",
+        "image": "linear-gradient(to bottom right, #B2F7EF,#7BDFF2 )",
         "position": "50% 50%",
         "repeat": "no-repeat",
         "size": "cover"
