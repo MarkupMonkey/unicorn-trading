@@ -1,11 +1,11 @@
 /* VARIABLES */
 :root {
     /* COLORS */
-    --color-skyblue: #7BDFF2;
-    --color-celeste: #B2F7EF;
-    --color-mintcream: #EFF7F6;
-    --color-cottoncandy: #F7D6E0;
-    --color-piggypink: #F2B5D4;
+    --color-skyblue: #7bdff2;
+    --color-celeste: #b2f7ef;
+    --color-mintcream: #eff7f6;
+    --color-cottoncandy: #f7d6e0;
+    --color-piggypink: #f2b5d4;
     --color-darkgray: #333333;
     --color-gray: #555555;
 
@@ -37,7 +37,6 @@
     --padding-xl: 3.5rem;
 }
 
-
 /* *IMPORTED FONTS*
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Quicksand', sans-serif; 
@@ -55,7 +54,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     color: var(--color-darkgray);
     overflow-wrap: break-word;
 }
@@ -73,7 +72,7 @@ h3 {
 }
 
 p {
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     font-size: var(--font-size-m);
 }
 
@@ -100,8 +99,8 @@ select {
     background-color: var(--color-mintcream);
     border: none;
     border-radius: 6px;
-    box-shadow: -2px -2px 6px 1px rgb(100, 100, 100),
-        3px 3px 4px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: -2px -2px 6px 1px var(--color-mintcream),
+        2px 2px 6px 1px var(--color-gray);
 }
 input:active,
 input:focus,

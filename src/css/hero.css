@@ -1,16 +1,15 @@
 .hero {
     display: flex;
     flex-direction: row;
-    padding: 6rem;
+    align-items: center;
+    padding: 0 6rem;
+    height: 100vh;
 }
 
-.hero-title {
-    color: var(--color-mintcream);
-}
-
-.hero-one {
+.hero-text {
     display: flex;
     flex-direction: column;
+    align-items: start;
     width: 48%;
     gap: 3rem;
 }
@@ -21,19 +20,14 @@
 
 .hero-mail {
     border: 2px solid pink;
-    background-color: transparent;
+    background-color: var(--color-mintcream);
     padding: 0.8rem;
     margin-right: 2rem;
 }
-.hero-mail::placeholder{text-align: left;
-color: var(--color-piggypink)}
-
-.hero-btn {
-    background-color: var(--color-piggypink);
-    color: aliceblue;
-    padding: 1.2rem;
-    margin-left: 0.2rem;
-
+.hero-mail::placeholder {
+    text-align: left;
+    font-family: "Quicksand", sans-serif;
+    color: var(--color-darkgray);
 }
 
 @media screen and (min-width: 200px) and (max-width: 768px) {
@@ -45,12 +39,6 @@ color: var(--color-piggypink)}
 
     .hero-pic {
         width: 100%;
-    }
-
-    .hero-title {
-        width: 100%;
-        padding: 0 5.2rem;
-
     }
 
     .hero-one {

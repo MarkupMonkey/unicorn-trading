@@ -1,16 +1,25 @@
 .btn {
     width: max-content;
     padding: var(--padding-s);
-    color: var(--accent-color);
-    background-color: var(--neutral-color);
-    border: 1px solid var(--accent-color);
-    border-radius: 12px;
+    color: var(--color-darkgray);
+    background-image: linear-gradient(
+        to bottom right,
+        var(--color-piggypink),
+        var(--color-cottoncandy),
+        var(--color-mintcream)
+    );
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
+    box-shadow: -2px -2px 6px 1px var(--color-mintcream),
+        2px 2px 6px 1px var(--color-gray);
 }
 .btn:hover {
     transform: translateY(-2px);
-    transition: all .16s ease;
+    box-shadow: -2px -2px 6px 1px var(--color-mintcream),
+        2px 4px 6px 1px var(--color-gray);
+    transition: all 0.16s ease;
 }
 
 .card {
@@ -23,5 +32,6 @@
     margin: 3rem;
     background-color: var(--primary-color);
     border-radius: 12px;
-    box-shadow: -2px -2px 6px 1px rgb(100, 100, 100), 3px 3px 4px 4px rgba(0, 0, 0, .6);
+    box-shadow: -2px -2px 6px 1px rgb(100, 100, 100),
+        3px 3px 4px 4px rgba(0, 0, 0, 0.6);
 }
