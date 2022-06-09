@@ -5,12 +5,12 @@ function Sidebar() {
     return (
         <aside className="sidebar border gradient">
             <div className="row-wrap align-center">
-            <div className="logo"></div>
-            <h2 className="font-josefin txt-size-l">Unicorn <br/> Trading</h2>
+                <div className="logo"></div>
+                <h2 className="font-josefin txt-size-l">Unicorn <br /> Trading</h2>
             </div>
-            
 
-            
+
+
             <div className="link-sidebar column justify-between p-l-m p-r-m">
                 <div className="p-b-s border_b w-100">
                     <a href="" className="font-josefin txt-size-m">Why us?</a>
@@ -28,17 +28,17 @@ function Sidebar() {
                     <a href="" className="font-josefin txt-size-m">Powerful for beginners and seasoned professionals alike</a>
                 </div>
 
-                </div>
-                <div className="row-nowrap justify-evenly">
-                    <button className="btn font-josefin">
-                        Login
-                    </button>
+            </div>
+            <div className="row-nowrap justify-between">
+                <button className="btn font-quicksand">
+                    Login
+                </button>
 
-                    <button className="btn font-josefin">
-                        Sign Up
-                    </button>
-                </div>
-            
+                <button className="btn font-quicksand">
+                    Sign Up
+                </button>
+            </div>
+
         </aside>
 
 
