@@ -4,6 +4,7 @@ import { Hero } from "./Hero";
 // Homepage lists portion
 import Lists from './Lists';
 import { ListData } from './ListData';
+import { PricesWrapper } from "./PricingWrapper";
 
 class Homepage extends React.Component {
     render() {
@@ -17,6 +18,7 @@ class Homepage extends React.Component {
             <div className="homepage">
                 <Hero />
                 {homePageList}
+                <PricesWrapper/>
             </div>
         )
     }
