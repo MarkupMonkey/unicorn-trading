@@ -22,6 +22,28 @@
     transition: all 0.16s ease;
 }
 
+.navbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.navbtn:hover {
+    transition: all 0.2s ease;
+}
+
+.nav-btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+@media screen and (max-width: 767px) {
+    .nav-btn-container {
+        flex-direction: row;
+    }
+}
+
 .card {
     display: flex;
     flex-flow: column nowrap;
