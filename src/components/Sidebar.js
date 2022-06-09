@@ -2,10 +2,13 @@ import React from "react";
 import { ListData } from "./ListData";
 
 function Sidebar() {
+    const backgroundLogo = {
+        backgroundImage: `url('/unicorno_logo.png')`
+    }
     return (
-        <nav className="sidebar border gradient">
+        <nav className="sidebar gradient">
             <div className="row-wrap align-center">
-                <div className="logo"></div>
+                <div className="logo" style={backgroundLogo}></div>
                 <h2 className="font-josefin txt-size-l">Unicorn <br /> Trading</h2>
             </div>
 
