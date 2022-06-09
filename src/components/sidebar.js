@@ -2,13 +2,15 @@ import React from "react";
 
 
 function Sidebar() {
+    const backgroundLogo = {
+        backgroundImage: `url(/unicorno_logo.png)`,
+    }
     return (
         <aside className="sidebar border gradient">
             <div className="row-wrap align-center">
-                <div className="logo"></div>
+                <div className="logo" style={backgroundLogo}></div>
                 <h2 className="font-josefin txt-size-l">Unicorn <br /> Trading</h2>
             </div>
-
 
 
             <div className="link-sidebar column justify-between p-l-m p-r-m">
@@ -40,10 +42,6 @@ function Sidebar() {
             </div>
 
         </aside>
-
-
-
-
 
     )
 }
