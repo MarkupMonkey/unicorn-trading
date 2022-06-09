@@ -27,3 +27,9 @@
 
 /* hero component */
 @import "hero.css";
+
+/* pricing component */
+@import "pricing.css";
+
+/* pricing wrapper component */
+@import "pricingWrapper.css";

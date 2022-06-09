@@ -1,0 +1,17 @@
+.prices-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 200px) and (max-width: 768px) {
+    .prices-wrapper {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
