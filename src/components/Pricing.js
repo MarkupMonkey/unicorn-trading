@@ -6,7 +6,7 @@ export const Pricing = (props) => {
             <div className="column align-center" >
                 <h2> Only ${props.price} /{props.billingPeriod}</h2>
                 <div className="savings-info m-t-m m-b-m">
-                    {props.billingPeriod === 'year' ? <p style={{ color: 'coral', fontSize: '16px' }}>SAVE $134 ANNUALLY</p> : ''}
+                    {props.billingPeriod === 'year' ? <p style={{ color: 'coral', fontSize: '1.7rem' }}>SAVE $134 ANNUALLY</p> : ''}
                 </div>
                 <ul className="column align-start">
                     <li className="font-quicksand txt-color-gray txt-size-m p-s">Daily options recommendation</li>
