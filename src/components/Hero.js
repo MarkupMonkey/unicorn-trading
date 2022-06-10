@@ -18,7 +18,7 @@ export const Hero = () => {
                 </form>
             </article>
             <picture className="hero-pic">
-                <img src='../images/Hero-homepage/landing_candle_img.png' alt="candlestick img" />
+                <img src='../images/Hero-homepage/dubbing-unicorn-graphic-2.png' alt="graphic finance" />
             </picture>
         </section>
 
