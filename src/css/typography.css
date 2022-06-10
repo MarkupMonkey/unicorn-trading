@@ -1,5 +1,16 @@
 .hero-text-gradient {
-    text-shadow: 1px 1px var(--color-darkgray);
+    filter: drop-shadow(0px 0px 1px var(--color-darkgray));
+    color: transparent;
+    background-clip: text;
+    background-color: transparent;
+    background-image: linear-gradient(
+        to bottom right,
+        var(--color-piggypink),
+        var(--color-cottoncandy),
+        var(--color-mintcream),
+        var(--color-celeste),
+        var(--color-skyblue)
+    );
 }
 
 .footer-link {

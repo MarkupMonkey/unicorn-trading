@@ -3,11 +3,10 @@ import React from "react";
 export const Hero = () => {
 
     return (
-
         <section className="hero">
             <article className="hero-text">
                 <div>
-                    <h1 className="hero-title txt-darkgray font-josefin">The option picker. <br /> Revisited. <br />Made for you.</h1>
+                    <h1 className="font-josefin hero-text-gradient">The option picker. <br /> Revisited. <br />Made for you.</h1>
                     <p className="txt-size-xl">Get trade alerts, cancel anytime.</p>
                 </div>
                 <form className="column align-center">
