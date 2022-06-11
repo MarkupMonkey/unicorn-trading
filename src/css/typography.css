@@ -1,16 +1,21 @@
 .hero-text-gradient {
+    position: relative;
     filter: drop-shadow(0px 0px 1px var(--color-darkgray));
     color: transparent;
     background-clip: text;
     background-color: transparent;
+    transition: all 0.5s ease;
     background-image: linear-gradient(
-        to bottom right,
+        180deg,
         var(--color-piggypink),
         var(--color-cottoncandy),
-        var(--color-mintcream),
         var(--color-celeste),
         var(--color-skyblue)
     );
+}
+
+.hero-title {
+    font-size: clamp(5.5rem, 4vmin, 7rem);
 }
 
 .footer-link {
@@ -18,7 +23,6 @@
     font-size: var(--font-size-m);
     font-weight: var(--font-weight-semibold);
     color: transparent;
-    transition: all 0.2s ease;
     background-clip: text;
     background-color: transparent;
     background-image: linear-gradient(
