@@ -1,10 +1,22 @@
 import React from "react";
-import { ListData } from "./ListData";
+import { LoginModal } from "./LoginModal";
+import { useState } from 'react'
 
-function Sidebar() {
+export function Sidebar() {
+    const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
     const backgroundLogo = {
         backgroundImage: `url('/unicorno_logo.png')`
     }
+
+    function openModalHandler() {
+        console.log(isLoginModalOpen)
+        setIsLoginModalOpen(isLoginModalOpen => isLoginModalOpen = true)
+    }
+
+    function closeModalHandler() {
+        setIsLoginModalOpen(isLoginModalOpen => isLoginModalOpen = false)
+    }
+
     return (
         <nav className="sidebar gradient">
             <div className="row-wrap align-center">
@@ -36,17 +48,16 @@ function Sidebar() {
 
             </div>
             <div className="nav-btn-container justify-between">
-                <button className="navbtn font-josefin txt-size-l txt-weight-semibold">
-                    <a>Login</a>
+                <button className="navbtn font-josefin txt-size-l txt-weight-semibold" onClick={openModalHandler}>
+                    <span>Login</span>
                     <div className="border_b w-100"></div>
                 </button>
                 <button className="navbtn font-josefin txt-size-l txt-weight-semibold">
-                    <a>Sign Up</a>
+                    <span>Sign Up</span>
                     <div className="border_b w-100"></div>
                 </button>
             </div>
+            {isLoginModalOpen && <LoginModal closeModal={closeModalHandler} />}
         </nav>
     )
 }
-
-export default Sidebar;
