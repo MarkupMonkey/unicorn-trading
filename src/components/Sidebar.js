@@ -1,20 +1,28 @@
 import React from "react";
 import { LoginModal } from "./LoginModal";
 import { useState } from 'react'
+import { SignUpModal } from './SignUpModal'
 
-export function Sidebar() {
+export function Sidebar({user}) {
     const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
+    const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false)
+
     const backgroundLogo = {
         backgroundImage: `url('/unicorno_logo.png')`
     }
 
-    function openModalHandler() {
-        console.log(isLoginModalOpen)
+    function openLoginModalHandler() {
         setIsLoginModalOpen(isLoginModalOpen => isLoginModalOpen = true)
     }
-
-    function closeModalHandler() {
+    function closeLoginModalHandler() {
         setIsLoginModalOpen(isLoginModalOpen => isLoginModalOpen = false)
+    }
+
+    function openSignUpModalHandler() {
+        setIsSignUpModalOpen(isSignUpModalOpen => isSignUpModalOpen = true)
+    }
+    function closeSignUpModalHandler() {
+        setIsSignUpModalOpen(isSignUpModalOpen => isSignUpModalOpen = false)
     }
 
     return (
@@ -48,16 +56,17 @@ export function Sidebar() {
 
             </div>
             <div className="nav-btn-container justify-between">
-                <button className="navbtn font-josefin txt-size-l txt-weight-semibold" onClick={openModalHandler}>
+                <button className="navbtn font-josefin txt-size-l txt-weight-semibold" onClick={openLoginModalHandler}>
                     <span>Login</span>
                     <div className="border_b w-100"></div>
                 </button>
-                <button className="navbtn font-josefin txt-size-l txt-weight-semibold">
+                <button className="navbtn font-josefin txt-size-l txt-weight-semibold" onClick={openSignUpModalHandler}>
                     <span>Sign Up</span>
                     <div className="border_b w-100"></div>
                 </button>
             </div>
-            {isLoginModalOpen && <LoginModal closeModal={closeModalHandler} />}
+            {isLoginModalOpen && <LoginModal user={user} closeModal={closeLoginModalHandler} />}
+            {isSignUpModalOpen && <SignUpModal closeModal={closeSignUpModalHandler} />}
         </nav>
     )
 }

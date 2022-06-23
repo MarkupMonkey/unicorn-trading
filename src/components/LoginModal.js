@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-export function LoginModal({ closeModal }) {
+export function LoginModal({ closeModal, user }) {
+    function authorizeUser() {
+        console.log(user)
+    }
+
+    useEffect(() => {
+        authorizeUser()
+    }, [])
+    
     return (
         <>
             <div className="py-10 bg-gray-900 text-4xl transition duration-150 ease-in-out z-10 fixed top-0 right-0 bottom-0 left-0" id="modal">
