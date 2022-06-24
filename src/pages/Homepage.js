@@ -1,11 +1,11 @@
 import React from "react";
-import { Hero } from "./Hero";
+import { Hero } from "../components/Hero";
 
 // Homepage lists portion
-import Lists from './Lists';
-import { ListData } from './ListData';
-import { PricesWrapper } from "./PricingWrapper";
-import {Footer} from "./Footer"
+import Lists from '../components/Lists';
+import { ListData } from '../components/ListData';
+import { PricesWrapper } from "../components/PricingWrapper";
+import {Footer} from "../components/Footer"
 
 class Homepage extends React.Component {
     render() {
