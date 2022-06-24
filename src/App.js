@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, Navigate } from 'react-router-dom';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import particlesOptions from "./particles.json";
 import { Sidebar } from './components/Sidebar';
-import Homepage from './components/Homepage';
-import { Dashboard } from './components/Dashboard';
+import Homepage from './pages/Homepage';
+import { Dashboard } from './pages/Dashboard';
 import Protected from './components/Protected';
 
 function App() {
@@ -13,38 +13,26 @@ function App() {
         loadFull(main);
     }, [])
 
+    /* Initialize the state with the contents of localstorage */
+    const [user, setUser] = useState(localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : { username: null, password: null, logged: false })
 
-    const [user, setUser] = useState([])
+    useEffect(() => {
+        const data = JSON.stringify(user)
+        localStorage.setItem('user', data)
+    }, [user])
 
-    /* Checks the localstorage. if the 'user' field is not empty,
-       the 'user' from the state will be filled with the user's data.
-       otherwise, the user will simply be 'false' */
-    function userChecker() {
-
-        if (localStorage.getItem('user')) {
-            console.log('user found in localStorage')
-            const localData = JSON.parse(localStorage.getItem('user'))
-            setUser({ ...localData })
-            setTimeout(() => {
-                console.log(user)
-            }, 200);
-
-        } else {
-            console.log('setting user to false')
-            setUser(false)
-        }
+    const setLogin = () => {
+        setUser({ ...user, logged: true })
     }
 
-    /* On render, check the localstorage for an existing user */
-    useEffect(() => {
-        userChecker()
-    }, [])
-
+    const setLogout = () => {
+        setUser({ ...user, logged: false })
+    }
 
     return (
         <div className="App">
             <Particles options={particlesOptions} init={particlesInit} />
-            <Sidebar user={user} />
+            <Sidebar user={user} setLogin={setLogin} setLogout={setLogout} />
             <Routes>
                 <Route path='/' element={<Homepage />} />
                 <Route element={<Protected user={user} />} >
@@ -57,7 +45,7 @@ function App() {
                     </div>
                 } />
             </Routes>
-        </div>
+        </div >
     );
 }
 

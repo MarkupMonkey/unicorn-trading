@@ -10,7 +10,7 @@ export function SignUpModal({ closeModal }) {
         const formData = {
             username: event.target.signUpUsername.value,
             password: event.target.signUpPassword.value,
-            authorized: false
+            logged: false
         }
         localStorage.setItem('user', JSON.stringify(formData))
     }

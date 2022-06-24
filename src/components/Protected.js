@@ -3,7 +3,7 @@ import {Navigate, Outlet} from 'react-router-dom';
 // ricevo le props
 const Protected = ({user, children}) => {
 
-    if (!user) {
+    if (user.logged === false) {
         return <Navigate to='/' replace />;
     }
 

@@ -90,11 +90,6 @@ hr {
     border: none;
 }
 
-label {
-    font-size: var(--font-size-m);
-    color: var(--color-darkgray);
-}
-
 input,
 textarea,
 select {
@@ -112,13 +107,6 @@ input:active,
 input:focus,
 input:focus-visible {
     outline: 2px solid var(--color-mintcream);
-}
-
-input::placeholder,
-textarea::placeholder {
-    text-align: center;
-    color: var(--color-darkgray);
-    font-size: var(--font-size-l);
 }
 
 html {
