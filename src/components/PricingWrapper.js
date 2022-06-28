@@ -15,7 +15,7 @@ export const PricesWrapper = (props) => {
     })
 
     return (
-        <div className="prices-wrapper">
+        <div className="flex flex-col md:flex-row gap-7">
             {pricingMenu}
         </div>
     )

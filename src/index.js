@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/index.css';
+import './index.css';
 import { Root } from './Root';
 import * as serviceWorker from './serviceWorker';
 
